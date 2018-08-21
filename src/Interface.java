@@ -37,7 +37,7 @@ import javax.swing.JScrollPane;
 
 public class Interface {
 
-	private JFrame frame;
+	JFrame frame;
 	Automaton automaton;
 	SolutionFinder solFind;
 	String currentState;
@@ -63,29 +63,6 @@ public class Interface {
 		this.solFind = solFind;
 		initialize();
 	}
-	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					new Main();
-					Automaton automaton = new Automaton();
-					SolutionFinder solFind = new SolutionFinder(automaton);
-					Interface window = new Interface(automaton, solFind);
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	
 	public void updateCurrentState(String nextState) {
 		currentState = currentState.replace("q", "");

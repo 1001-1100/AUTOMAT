@@ -139,6 +139,5 @@ public class Automaton {
 		return states;
 	}
 	
-	
-	
+		
 }
