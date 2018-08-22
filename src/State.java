@@ -2,31 +2,35 @@ import java.util.ArrayList;
 
 public class State {
 	
-	private String stateName;
-	private String stateNumber;
+	private int stateNumber;
+	private String stateLabel;
 	private ArrayList<Transition> transitions;
 	boolean isFinal;
 	
-	public State(String stateName, String stateNumber, ArrayList<Transition> transitions, boolean isFinal) {
-		this.stateName = stateName;
+	public State(int stateNumber, String stateLabel, boolean isFinal) {
+		this.stateLabel = stateLabel;
 		this.stateNumber = stateNumber;
-		this.transitions = transitions;
 		this.isFinal = isFinal;
+		transitions = new ArrayList<>();
 	}
 
-	public String getStateName() {
-		return stateName;
+	public String getStateLabel() {
+		return stateLabel;
 	}
 
 	public ArrayList<Transition> getTransitions() {
 		return transitions;
+	}
+	
+	public void addTransition(Transition newTransition) {
+		transitions.add(newTransition);
 	}
 
 	public boolean isFinal() {
 		return isFinal;
 	}
 
-	public String getStateNumber() {
+	public int getStateNumber() {
 		return stateNumber;
 	}
 
