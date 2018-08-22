@@ -13,8 +13,9 @@ public class Main {
 				try {
 					new Main();
 					Automaton automaton = new Automaton();
-					SolutionFinder solFind = new SolutionFinder(automaton);
-					Interface window = new Interface(automaton, solFind);
+					AutomatonInterface automatonInterface = new AutomatonInterface();
+					//SolutionFinder solFind = new SolutionFinder(automaton);
+					Interface window = new Interface(automaton, automatonInterface);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

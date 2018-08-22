@@ -10,129 +10,110 @@ public class Automaton {
 	}
 	
 	private void addStates() {
-		State state;
-		ArrayList<Transition> transitions;
 		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("LC","q1"));
-		state = new State("q0","q0",transitions,false);
-		states.add(state);
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("LC","q0"));
-		transitions.add(new Transition("C","q3"));
-		transitions.add(new Transition("L","q2"));
-		state = new State("q1","q1",transitions,false);
-		states.add(state);
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("L","q1"));
-		transitions.add(new Transition("HL","q4"));
-		transitions.add(new Transition("HH","q6"));
-		transitions.add(new Transition("LG","q5"));
-		state = new State("q2","q2",transitions,false);
-		states.add(state);	
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HC","q4"));
-		transitions.add(new Transition("CG","q5"));
-		transitions.add(new Transition("C","q1"));
-		state = new State("q3","q3",transitions,false);
-		states.add(state);		
+		State q0 = new State(0,"HHLCG",false);
+		states.add(q0);
 
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HC","q3"));
-		transitions.add(new Transition("HL","q2"));
-		transitions.add(new Transition("LC","q7"));
-		state = new State("q4","q4",transitions,false);
-		states.add(state);				
+		State q1 = new State(1,"LC",false);
+		states.add(q1);
+		
+		State q2 = new State(2,"HHLG",false);
+		states.add(q2);	
+		
+		State q3 = new State(3,"HHCG",false);
+		states.add(q3);		
 
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("CG","q3"));
-		transitions.add(new Transition("LC","q10"));
-		transitions.add(new Transition("LG","q2"));
-		transitions.add(new Transition("C","q9"));
-		state = new State("q5","q5",transitions,false);
-		states.add(state);			
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HH","q2"));
-		transitions.add(new Transition("HC","q7"));
-		transitions.add(new Transition("C","q8"));
-		state = new State("q6","q6",transitions,false);
-		states.add(state);	
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("LC","q4"));
-		transitions.add(new Transition("HC","q6"));
-		state = new State("q7","q7",transitions,false);
-		states.add(state);			
+		State q4 = new State(4,"HLC",false);
+		states.add(q4);				
 
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("LG","q14"));
-		transitions.add(new Transition("LC","q16"));
-		transitions.add(new Transition("CG","q11"));
-		transitions.add(new Transition("C","q6"));
-		state = new State("q8","q8",transitions,false);
-		states.add(state);	
+		State q5 = new State(5,"LCG",false);
+		states.add(q5);			
 		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HC","q15"));
-		transitions.add(new Transition("HH","q14"));
-		transitions.add(new Transition("C","q5"));
-		state = new State("q9","q9",transitions,false);
-		states.add(state);	
+		State q6 = new State(6,"HHC",false);
+		states.add(q6);	
 		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("LC","q5"));
-		state = new State("q10","q10",transitions,false);
-		states.add(state);	
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HC","q17"));
-		transitions.add(new Transition("CG","q8"));
-		transitions.add(new Transition("C","q12"));
-		state = new State("q11","q11",transitions,false);
-		states.add(state);		
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("L","q14"));
-		transitions.add(new Transition("LC","q13"));
-		transitions.add(new Transition("C","q11"));
-		state = new State("q12","q12",transitions,false);
-		states.add(state);	
-		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("LC","q12"));
-		state = new State("q13","q13",transitions,true);
-		states.add(state);		
+		State q7 = new State(7,"HLCG",false);
+		states.add(q7);			
 
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HH","q9"));
-		transitions.add(new Transition("HL","q17"));
-		transitions.add(new Transition("LG","q8"));
-		transitions.add(new Transition("L","q12"));
-		state = new State("q14","q14",transitions,false);
-		states.add(state);	
-
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HC","q9"));
-		transitions.add(new Transition("LC","q17"));
-		state = new State("q15","q15",transitions,false);
-		states.add(state);			
+		State q8 = new State(8,"LCG",false);
+		states.add(q8);	
 		
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("LC","q8"));
-		state = new State("q16","q16",transitions,false);
-		states.add(state);					
-
-		transitions = new ArrayList<>();
-		transitions.add(new Transition("HL","q14"));
-		transitions.add(new Transition("HC","q11"));
-		transitions.add(new Transition("LC","q15"));
-		state = new State("q17","q17",transitions,false);
-		states.add(state);			
+		State q9 = new State(9,"HHC",false);
+		states.add(q9);	
 		
+		State q10 = new State(10,"HHLC",false);
+		states.add(q10);	
+		
+		State q11 = new State(11,"HHCG",false);
+		states.add(q11);		
+		
+		State q12 = new State(12,"LC",false);
+		states.add(q12);	
+		
+		State q13 = new State(13,"HHLCG",true);
+		states.add(q13);		
+
+		State q14 = new State(14,"HHLG",false);
+		states.add(q14);	
+
+		State q15 = new State(15,"HLCG",false);
+		states.add(q15);			
+		
+		State q16 = new State(16,"HHLC",false);
+		states.add(q16);					
+
+		State q17 = new State(17,"HLC",false);
+		states.add(q17);			
+		
+		q0.addTransition(new Transition("LC",q1));
+		q1.addTransition(new Transition("LC",q0));
+		q1.addTransition(new Transition("C",q3));
+		q1.addTransition(new Transition("L",q2));
+		q2.addTransition(new Transition("L",q1));
+		q2.addTransition(new Transition("HL",q4));
+		q2.addTransition(new Transition("HH",q6));
+		q2.addTransition(new Transition("LG",q5));
+		q3.addTransition(new Transition("HC",q4));
+		q3.addTransition(new Transition("CG",q5));
+		q3.addTransition(new Transition("C",q1));
+		q4.addTransition(new Transition("HC",q3));
+		q4.addTransition(new Transition("HL",q2));
+		q4.addTransition(new Transition("LC",q7));
+		q5.addTransition(new Transition("CG",q3));
+		q5.addTransition(new Transition("LC",q10));
+		q5.addTransition(new Transition("LG",q2));
+		q5.addTransition(new Transition("C",q9));
+		q6.addTransition(new Transition("HH",q2));
+		q6.addTransition(new Transition("HC",q7));
+		q6.addTransition(new Transition("C",q8));
+		q7.addTransition(new Transition("LC",q4));
+		q7.addTransition(new Transition("HC",q6));
+		q8.addTransition(new Transition("LG",q14));
+		q8.addTransition(new Transition("LC",q16));
+		q8.addTransition(new Transition("CG",q11));
+		q8.addTransition(new Transition("C",q6));
+		q9.addTransition(new Transition("HC",q15));
+		q9.addTransition(new Transition("HH",q14));
+		q9.addTransition(new Transition("C",q5));
+		q10.addTransition(new Transition("LC",q5));
+		q11.addTransition(new Transition("HC",q17));
+		q11.addTransition(new Transition("CG",q8));
+		q11.addTransition(new Transition("C",q12));
+		q12.addTransition(new Transition("L",q14));
+		q12.addTransition(new Transition("LC",q13));
+		q12.addTransition(new Transition("C",q11));
+		q13.addTransition(new Transition("LC",q12));
+		q14.addTransition(new Transition("HH",q9));
+		q14.addTransition(new Transition("HL",q17));
+		q14.addTransition(new Transition("LG",q8));
+		q14.addTransition(new Transition("L",q12));
+		q15.addTransition(new Transition("HC",q9));
+		q15.addTransition(new Transition("LC",q17));
+		q16.addTransition(new Transition("LC",q8));
+		q17.addTransition(new Transition("HL",q14));
+		q17.addTransition(new Transition("HC",q11));
+		q17.addTransition(new Transition("LC",q15));
+	
 	}
 
 	public ArrayList<State> getStates() {
