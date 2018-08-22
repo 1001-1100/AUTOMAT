@@ -2,9 +2,9 @@
 public class Transition {
 
 	private String input;
-	private String destination;
+	private State destination;
 	
-	public Transition(String input, String destination) {
+	public Transition(String input, State destination) {
 		this.input = input;
 		this.destination = destination;
 	}
@@ -13,7 +13,7 @@ public class Transition {
 		return input;
 	}
 
-	public String getDestination() {
+	public State getDestination() {
 		return destination;
 	}
 
