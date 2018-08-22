@@ -30,6 +30,7 @@ public class Interface {
 
 	JFrame frame;
 	AutomatonInterface automatonInterface;
+	SolutionInterface solutionInterface;
 	Automaton automaton;
 	
 	State currentState;
@@ -54,9 +55,10 @@ public class Interface {
 	/**
 	 * Create the application.
 	 */
-	public Interface(Automaton automaton, AutomatonInterface automatonInterface) {
+	public Interface(Automaton automaton, AutomatonInterface automatonInterface, SolutionInterface solutionInterface) {
 		this.automaton = automaton;
 		this.automatonInterface = automatonInterface;
+		this.solutionInterface = solutionInterface;
 		//this.solFind = solFind;
 		initialize();
 		refreshGraphics();
@@ -545,6 +547,11 @@ public class Interface {
 		});
 		
 		JButton btnShowSolutions = new JButton("Show Solutions");
+		btnShowSolutions.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				solutionInterface.show();
+			}
+		});
 		
 		JLabel lblCurrentState = new JLabel("Current State:");
 		
