@@ -1,26 +1,15 @@
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
-
-import javax.imageio.ImageIO;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.GridLayout;
-import java.awt.Image;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-
 import javax.swing.border.EtchedBorder;
 import javax.swing.JLabel;
 import java.awt.FlowLayout;
-import java.awt.Graphics;
-
 import javax.swing.ImageIcon;
-import javax.swing.border.LineBorder;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.MatteBorder;
@@ -120,7 +109,7 @@ public class Interface {
 
 				}
 			});
-			hPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/person96.png")));
+			hPic.setIcon(new ImageIcon(Interface.class.getResource("person96.png")));
 			marsContentPanel.add(hPic);
 		}else if(content.equals("L")) {
 			JLabel lPic = new JLabel();
@@ -148,7 +137,7 @@ public class Interface {
 
 				}
 			});
-			lPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/lion96.png")));
+			lPic.setIcon(new ImageIcon(Interface.class.getResource("lion96.png")));
 			marsContentPanel.add(lPic);			
 		}else if(content.equals("C")) {
 			JLabel cPic = new JLabel();
@@ -176,7 +165,7 @@ public class Interface {
 
 				}
 			});
-			cPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/cow96.png")));
+			cPic.setIcon(new ImageIcon(Interface.class.getResource("cow96.png")));
 			marsContentPanel.add(cPic);			
 		}else if(content.equals("G")) {
 			JLabel gPic = new JLabel();
@@ -204,7 +193,7 @@ public class Interface {
 
 				}
 			});
-			gPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/grain96.png")));
+			gPic.setIcon(new ImageIcon(Interface.class.getResource("grain96.png")));
 			marsContentPanel.add(gPic);			
 		}
 		marsContentPanel.revalidate();
@@ -238,7 +227,7 @@ public class Interface {
 
 				}
 			});
-			hPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/person96.png")));
+			hPic.setIcon(new ImageIcon(Interface.class.getResource("person96.png")));
 			earthContentPanel.add(hPic);
 		}else if(content.equals("L")) {
 			JLabel lPic = new JLabel();
@@ -266,7 +255,7 @@ public class Interface {
 
 				}
 			});
-			lPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/lion96.png")));
+			lPic.setIcon(new ImageIcon(Interface.class.getResource("lion96.png")));
 			earthContentPanel.add(lPic);			
 		}else if(content.equals("C")) {
 			JLabel cPic = new JLabel();
@@ -294,7 +283,7 @@ public class Interface {
 
 				}
 			});
-			cPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/cow96.png")));
+			cPic.setIcon(new ImageIcon(Interface.class.getResource("cow96.png")));
 			earthContentPanel.add(cPic);			
 		}else if(content.equals("G")) {
 			JLabel gPic = new JLabel();
@@ -322,7 +311,7 @@ public class Interface {
 
 				}
 			});
-			gPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/grain96.png")));
+			gPic.setIcon(new ImageIcon(Interface.class.getResource("grain96.png")));
 			earthContentPanel.add(gPic);			
 		}
 		earthContentPanel.revalidate();
@@ -332,19 +321,19 @@ public class Interface {
 	public void addMarsContent(String content) {
 		if(content.equals("H")) {
 			JLabel hPic = new JLabel();
-			hPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/person96.png")));
+			hPic.setIcon(new ImageIcon(Interface.class.getResource("person96.png")));
 			marsContentPanel.add(hPic);
 		}else if(content.equals("L")) {
 			JLabel lPic = new JLabel();
-			lPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/lion96.png")));
+			lPic.setIcon(new ImageIcon(Interface.class.getResource("lion96.png")));
 			marsContentPanel.add(lPic);			
 		}else if(content.equals("C")) {
 			JLabel cPic = new JLabel();
-			cPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/cow96.png")));
+			cPic.setIcon(new ImageIcon(Interface.class.getResource("cow96.png")));
 			marsContentPanel.add(cPic);			
 		}else if(content.equals("G")) {
 			JLabel gPic = new JLabel();
-			gPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/grain96.png")));
+			gPic.setIcon(new ImageIcon(Interface.class.getResource("grain96.png")));
 			marsContentPanel.add(gPic);			
 		}
 		marsContentPanel.revalidate();
@@ -354,19 +343,19 @@ public class Interface {
 	public void addEarthContent(String content) {
 		if(content.equals("H")) {
 			JLabel hPic = new JLabel();
-			hPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/person96.png")));
+			hPic.setIcon(new ImageIcon(Interface.class.getResource("person96.png")));
 			earthContentPanel.add(hPic);
 		}else if(content.equals("L")) {
 			JLabel lPic = new JLabel();
-			lPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/lion96.png")));
+			lPic.setIcon(new ImageIcon(Interface.class.getResource("lion96.png")));
 			earthContentPanel.add(lPic);			
 		}else if(content.equals("C")) {
 			JLabel cPic = new JLabel();
-			cPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/cow96.png")));
+			cPic.setIcon(new ImageIcon(Interface.class.getResource("cow96.png")));
 			earthContentPanel.add(cPic);			
 		}else if(content.equals("G")) {
 			JLabel gPic = new JLabel();
-			gPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/grain96.png")));
+			gPic.setIcon(new ImageIcon(Interface.class.getResource("grain96.png")));
 			earthContentPanel.add(gPic);			
 		}
 		earthContentPanel.revalidate();
@@ -464,7 +453,7 @@ public class Interface {
 			}
 		}
 		if(!found) {
-			JOptionPane.showMessageDialog(null, "Something gets eaten! Game Over.");
+			JOptionPane.showMessageDialog(null, "Input is not valid! Game Over.");
 			resetGame();
 		}
 	}
@@ -474,10 +463,10 @@ public class Interface {
 			earthScientist.removeAll();
 			marsScientist.removeAll();
 			JLabel sciPic = new JLabel("");
-			sciPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/scientist96.png")));
+			sciPic.setIcon(new ImageIcon(Interface.class.getResource("scientist96.png")));
 			marsScientist.add(sciPic);
 			JLabel rocPic = new JLabel("");
-			rocPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/rocket96.png")));
+			rocPic.setIcon(new ImageIcon(Interface.class.getResource("rocket96.png")));
 			marsScientist.add(rocPic);
 			marsScientist.revalidate();
 			earthScientist.revalidate();
@@ -488,10 +477,10 @@ public class Interface {
 			marsScientist.removeAll();
 			earthScientist.removeAll();
 			JLabel sciPic = new JLabel("");
-			sciPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/scientist96.png")));
+			sciPic.setIcon(new ImageIcon(Interface.class.getResource("scientist96.png")));
 			earthScientist.add(sciPic);
 			JLabel rocPic = new JLabel("");
-			rocPic.setIcon(new ImageIcon(Interface.class.getResource("/pictures/rocket96.png")));
+			rocPic.setIcon(new ImageIcon(Interface.class.getResource("rocket96.png")));
 			earthScientist.add(rocPic);
 			marsScientist.revalidate();
 			earthScientist.revalidate();
@@ -672,7 +661,7 @@ public class Interface {
 		earthPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		
 		JLabel lblEarth = new JLabel("");
-		lblEarth.setIcon(new ImageIcon(Interface.class.getResource("/pictures/earth64.png")));
+		lblEarth.setIcon(new ImageIcon(Interface.class.getResource("earth64.png")));
 		
 		earthContentPanel = new JPanel();
 		earthContentPanel.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
@@ -719,7 +708,7 @@ public class Interface {
 		marsPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		
 		JLabel lblMars = new JLabel("");
-		lblMars.setIcon(new ImageIcon(Interface.class.getResource("/pictures/mars64.png")));
+		lblMars.setIcon(new ImageIcon(Interface.class.getResource("mars64.png")));
 		
 		marsContentPanel = new JPanel();
 		marsContentPanel.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
@@ -822,20 +811,20 @@ public class Interface {
 		
 		JLabel stateMap = new JLabel("");
 		statesPanel.setLayer(stateMap, 0);
-		stateMap.setIcon(new ImageIcon(Interface.class.getResource("/pictures/FA arranged better 600.png")));
+		stateMap.setIcon(new ImageIcon(Interface.class.getResource("FA arranged better 600.png")));
 		stateMap.setBounds(0, 0, 607, 505);
 		statesPanel.add(stateMap);
 		
 		JLabel q0 = new JLabel("");
 		statesPanel.setLayer(q0, 1);
-		q0.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q0.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		q0.setBounds(16, 59, 38, 33);
 		q0.setVisible(false);
 		statesPanel.add(q0);
 		visualStates.add(q0);
 		
 		JLabel q1 = new JLabel("");
-		q1.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q1.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q1, 1);
 		q1.setBounds(10, 207, 38, 33);
 		q1.setVisible(false);
@@ -844,7 +833,7 @@ public class Interface {
 		
 		JLabel q2 = new JLabel("");
 		statesPanel.setLayer(q2, 1);
-		q2.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q2.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		q2.setBounds(179, 271, 38, 33);
 		q2.setVisible(false);
 		statesPanel.add(q2);
@@ -852,7 +841,7 @@ public class Interface {
 		
 		JLabel q3 = new JLabel("");
 		statesPanel.setLayer(q3, 1);
-		q3.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q3.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		q3.setBounds(120, 69, 38, 33);
 		q3.setVisible(false);
 		statesPanel.add(q3);
@@ -860,7 +849,7 @@ public class Interface {
 		
 		JLabel q4 = new JLabel("");
 		statesPanel.setLayer(q4, 1);
-		q4.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q4.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		q4.setBounds(71, 338, 38, 33);
 		q4.setVisible(false);
 		statesPanel.add(q4);
@@ -868,14 +857,14 @@ public class Interface {
 		
 		JLabel q5 = new JLabel("");
 		statesPanel.setLayer(q5, 1);
-		q5.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q5.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		q5.setBounds(242, 106, 38, 33);
 		q5.setVisible(false);
 		statesPanel.add(q5);
 		visualStates.add(q5);
 		
 		JLabel q6 = new JLabel("");
-		q6.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q6.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q6, 1);
 		q6.setBounds(208, 377, 38, 33);
 		q6.setVisible(false);
@@ -883,7 +872,7 @@ public class Interface {
 		visualStates.add(q6);
 		
 		JLabel q7 = new JLabel("");
-		q7.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q7.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q7, 1);
 		q7.setBounds(109, 448, 38, 33);
 		q7.setVisible(false);
@@ -891,7 +880,7 @@ public class Interface {
 		visualStates.add(q7);
 		
 		JLabel q8 = new JLabel("");
-		q8.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q8.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q8, 1);
 		q8.setBounds(332, 363, 38, 33);
 		q8.setVisible(false);
@@ -899,7 +888,7 @@ public class Interface {
 		visualStates.add(q8);
 		
 		JLabel q9 = new JLabel("");
-		q9.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q9.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q9, 1);
 		q9.setBounds(346, 78, 38, 33);
 		q9.setVisible(false);
@@ -908,7 +897,7 @@ public class Interface {
 		
 		JLabel q10 = new JLabel("");
 		q10.setEnabled(true);
-		q10.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q10.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q10, 1);
 		q10.setBounds(229, 7, 38, 33);
 		q10.setVisible(false);
@@ -916,7 +905,7 @@ public class Interface {
 		visualStates.add(q10);
 		
 		JLabel q11 = new JLabel("");
-		q11.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q11.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q11, 1);
 		q11.setBounds(487, 319, 38, 33);
 		q11.setVisible(false);
@@ -925,7 +914,7 @@ public class Interface {
 		
 		JLabel q12 = new JLabel("");
 		statesPanel.setLayer(q12, 1);
-		q12.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q12.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		q12.setBounds(553, 263, 38, 33);
 		q12.setVisible(false);
 		statesPanel.add(q12);
@@ -933,14 +922,14 @@ public class Interface {
 		
 		JLabel q13 = new JLabel("");
 		statesPanel.setLayer(q13, 1);
-		q13.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q13.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		q13.setBounds(522, 167, 38, 33);
 		q13.setVisible(false);
 		statesPanel.add(q13);
 		visualStates.add(q13);
 		
 		JLabel q14 = new JLabel("");
-		q14.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q14.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q14, 1);
 		q14.setBounds(283, 227, 38, 33);
 		q14.setVisible(false);
@@ -948,7 +937,7 @@ public class Interface {
 		visualStates.add(q14);
 		
 		JLabel q15 = new JLabel("");
-		q15.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q15.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q15, 1);
 		q15.setBounds(450, 33, 38, 33);
 		q15.setVisible(false);
@@ -956,7 +945,7 @@ public class Interface {
 		visualStates.add(q15);
 		
 		JLabel q16 = new JLabel("");
-		q16.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q16.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q16, 1);
 		q16.setBounds(471, 427, 38, 33);
 		q16.setVisible(false);
@@ -964,7 +953,7 @@ public class Interface {
 		visualStates.add(q16);
 		
 		JLabel q17 = new JLabel("");
-		q17.setIcon(new ImageIcon(Interface.class.getResource("/pictures/selector.png")));
+		q17.setIcon(new ImageIcon(Interface.class.getResource("selector.png")));
 		statesPanel.setLayer(q17, 1);
 		q17.setBounds(414, 163, 38, 33);
 		q17.setVisible(false);
