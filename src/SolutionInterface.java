@@ -65,6 +65,14 @@ public class SolutionInterface {
 			}
 			JPanel solutionContainer = new JPanel();
 			JTextArea solution = new JTextArea(solutionString);
+			String[] transitions = solutionString.split(" ");
+			for(int j = 0 ; j < transitions.length ; j++) {
+				String transitionString = "Bring ";
+				if(transitions[j].equals("H")) {
+					
+				}
+			}
+					
 			solution.setEditable(false);
 			solutionContainer.add(solution);
 			solutionContainer.setName(Integer.toString(i));
