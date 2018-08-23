@@ -44,9 +44,14 @@ public class Interface {
 	
 	JLabel playButton;
 	JButton undoButton;
+	JButton btnSkip;
+	
+	int timer;
 	
 	boolean emptyInput;
 	boolean turn;
+	boolean isEarth;
+	boolean skip;
 	JLabel background;
 	JLayeredPane graphics;
 	private JTextField currentStateField;
@@ -85,12 +90,24 @@ public class Interface {
 	}
 	
 	private void removeGraphics() {
-		graphics.remove(s);
-		graphics.remove(h1);
-		graphics.remove(h2);
-		graphics.remove(l);
-		graphics.remove(c);
-		graphics.remove(g);
+		try {
+			graphics.remove(s);
+		}catch(Exception e) {}
+		try {
+			graphics.remove(h1);
+		}catch(Exception e) {}
+		try {
+			graphics.remove(h2);
+		}catch(Exception e) {}
+		try {
+			graphics.remove(l);
+		}catch(Exception e) {}
+		try {
+			graphics.remove(c);
+		}catch(Exception e) {}
+		try {
+			graphics.remove(g);
+		}catch(Exception e) {}
 	}
 	
 	private void addScientist() {
@@ -492,31 +509,48 @@ public class Interface {
 						newIcon.getImage().flush();
 						background.setIcon(newIcon);
 						turn = false;
+						isEarth = false;
+						btnSkip.setVisible(true);
+						timer = 5500;
 						try {
-							Thread.sleep(5500);
+							while(timer > 0) {
+								Thread.sleep(1);
+								timer -= 1;
+							}
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						background.setIcon(new ImageIcon(Interface.class.getResource("/rocket-end.png")));
-						playButton.setVisible(true);
-						graphics.repaint();
+						if(!skip) {
+							setMars();
+							refreshGraphics();
+						}else {
+							skip = false;
+						}
 					}else {
 						ImageIcon newIcon = new ImageIcon(Interface.class.getResource("/rocket-earth.gif"));
 						newIcon.getImage().flush();
 						background.setIcon(newIcon);
 						turn = true;
+						isEarth = true;
+						btnSkip.setVisible(true);
+						timer = 5500;
 						try {
-							Thread.sleep(5500);
+							while(timer > 0) {
+								Thread.sleep(1);	
+								timer -= 1;
+							}
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						background.setIcon(new ImageIcon(Interface.class.getResource("/rocket-start.png")));
-						playButton.setVisible(true);
-						graphics.repaint();
+						if(!skip) {
+							setEarth();	
+							refreshGraphics();
+						}else {
+							skip = false;
+						}
 					}	
-					refreshGraphics();
 					if(currentState.equals(automaton.getStates().get(13))) {
 						JOptionPane.showMessageDialog(frame, "Victory for mankind!");
 					}
@@ -525,7 +559,41 @@ public class Interface {
 			t.start();
 		}else {
 			JOptionPane.showMessageDialog(frame, "Invalid input! Game Over!");
+			reset();
 		}
+	}
+	
+	private void setMars() {
+		background.setIcon(new ImageIcon(Interface.class.getResource("/rocket-end.png")));
+		playButton.setVisible(true);
+		btnSkip.setVisible(false);
+		graphics.repaint();
+	}
+	
+	private void setEarth() {
+		background.setIcon(new ImageIcon(Interface.class.getResource("/rocket-start.png")));
+		playButton.setVisible(true);
+		btnSkip.setVisible(false);
+		graphics.repaint();
+	}
+	
+	private void reset() {
+		try {
+			removeGraphics();
+		}catch(Exception e) {}
+			input = "";
+			currentInputField.setText(input);
+			isEarth = true;
+			automatonInterface.removeCurrentState(currentState.getStateNumber());
+			automatonInterface.addCurrentState(0);
+			currentState = automaton.getStates().get(0);
+			currentStateField.setText("q"+currentState.getStateNumber());
+			if(isEarth) {
+				setEarth();
+			}else {
+				setMars();
+			}
+			refreshGraphics();
 	}
 	
 	private void initialize() {
@@ -667,6 +735,24 @@ public class Interface {
 		playButton.setIcon(new ImageIcon(Interface.class.getResource("/play_button96.png")));
 		playButton.setBounds(350, 205, 96, 96);
 		graphics.add(playButton);
+		
+		btnSkip = new JButton("SKIP");
+		btnSkip.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				skip = true;
+				if(isEarth) {
+					setEarth();
+				}else {
+					setMars();
+				}
+				refreshGraphics();
+				btnSkip.setVisible(false);
+				timer = 0;
+			}
+		});
+		btnSkip.setVisible(false);
+		btnSkip.setBounds(671, 563, 117, 25);
+		graphics.add(btnSkip);
 		graphicalPanel.setLayout(gl_graphicalPanel);
 		GroupLayout gl_displayPanel = new GroupLayout(displayPanel);
 		gl_displayPanel.setHorizontalGroup(
@@ -685,6 +771,8 @@ public class Interface {
 		
 		turn = true;
 		emptyInput = true;
+		isEarth = true;
+		skip = false;
 		
 		currentInputField.setText(input);
 		currentStateField.setText("q"+currentState.getStateNumber());
